@@ -60,6 +60,7 @@ namespace Project.Net8.Service.Permission
             var entity = new User
             {
                 UserName = model.UserName,
+                FullName = model.FullName,
                 Email = model.Email,
                 Name = model.Name,
                 UnitRole = model.UnitRole,
@@ -114,6 +115,7 @@ namespace Project.Net8.Service.Permission
             entity.Email = model.Email;
             entity.Name = model.Name;
             entity.ModifiedAt = DateTime.Now;
+            entity.FullName = model.FullName;
             entity.ModifiedBy = CurrentUserName;
             entity.IsVerified = model.IsVerified;
             entity.IsSyncPasswordSuccess = model.IsSyncPasswordSuccess;
