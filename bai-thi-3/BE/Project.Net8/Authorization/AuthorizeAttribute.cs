@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.IdentityModel.Tokens;
 using MongoDB.Driver;
-using NKTM.Constants;
+using Project.Net8.Constants;
 using Project.Net8.Models.Permission;
 
 namespace Project.Net8.Authorization

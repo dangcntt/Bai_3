@@ -1,4 +1,4 @@
-namespace NKTM.Constants;
+namespace Project.Net8.Constants;
 
 public class CommonFormat
 {

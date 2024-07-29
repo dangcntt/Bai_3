@@ -44,6 +44,8 @@ public class BaiThiModel: Audit, TEntity<string>
     public CommonModelShort TrangThai { get; set; }
 
     public string ParentId { get; set; }
+
+    public List<FileShortModel> Files { get; set; }
     #endregion
 
     #region Bài 4

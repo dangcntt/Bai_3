@@ -10,11 +10,4 @@ public class Projection
         .Include(x=>x.Id)
         .Include(x=>x.Code)
         .Include(x =>x.Name);
-    
-    
-    
-    
-    
-
-
 }

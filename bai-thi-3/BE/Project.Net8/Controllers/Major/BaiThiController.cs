@@ -5,7 +5,7 @@ using DTC.DefaultRepository.FromBodyModels;
 using DTC.DefaultRepository.Helpers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using NKTM.Constants;
+using Project.Net8.Constants;
 using Project.Net8.Controllers.DefaultRepository;
 using Project.Net8.Installers;
 using Project.Net8.Interface.Major;

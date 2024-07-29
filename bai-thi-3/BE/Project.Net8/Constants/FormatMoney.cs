@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using System.Text.RegularExpressions;
 
-namespace NKTM.Constants
+namespace Project.Net8.Constants
 {
     public static class FormatMoney
     {

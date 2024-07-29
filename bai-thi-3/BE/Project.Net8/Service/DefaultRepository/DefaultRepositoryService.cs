@@ -6,7 +6,7 @@ using DTC.DefaultRepository.Models.Core;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
-using NKTM.Constants;
+using Project.Net8.Constants;
 using Project.Net8.FromBodyModels;
 using Project.Net8.Installers;
 using Project.Net8.Interface.DefaultRepository;

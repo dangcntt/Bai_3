@@ -22,7 +22,6 @@ namespace Project.Net8.Constants
             return true;
         }
         
-        
         internal static bool  Is_Number(string pText, int length)
         {
             if (pText == null)
@@ -34,7 +33,6 @@ namespace Project.Net8.Constants
             }
             return true;
         }
-        
         
         internal static bool IsDateValid(DateTime? date)
         {
@@ -48,7 +46,6 @@ namespace Project.Net8.Constants
 
         }
         
-        
         internal static bool IsObject(dynamic model)
         {
             if (model == null) return false;
@@ -60,11 +57,6 @@ namespace Project.Net8.Constants
             return false;
         }
         
-        
-
-
-
-
         internal static bool IsCommonVaild(CommonModelShort model)
         {
             if (model == null) return false ; 
@@ -74,9 +66,7 @@ namespace Project.Net8.Constants
             {
                 return true;
             }              
-
             return false;
-
         }
     
         internal static bool IsListConmonValid(List<CommonModelShort> models)
@@ -92,36 +82,25 @@ namespace Project.Net8.Constants
                     return false;
                 }
             }
-
             return true; 
         }
 
-
         internal static bool checkFormatTimeString(string val)
-
         {
             try
             {
-                
                 DateTime dt = DateTime.ParseExact(val, "HH:mm", System.Globalization.CultureInfo.InvariantCulture);
-
-
                 string tempdate = dt.ToString("HH:mm");
-
                 if (tempdate == val)
                 {
-                    // Successfully parsed string goes here 
                     return true;
                 }
                 return false;
             }
-
             catch (Exception ex)
             {
-
                 throw new ResponseMessageException().WithCode(DefaultCode.EXCEPTION).WithMessage(ex.Message);
             }
-
         }
     }
 }

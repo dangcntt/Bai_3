@@ -1,4 +1,4 @@
-namespace NKTM.Constants
+namespace Project.Net8.Constants
 {
     public static class DefaultNameCollection
     {
@@ -10,7 +10,6 @@ namespace NKTM.Constants
         public const string UNIT_ROLE = "CR_UNIT_ROLE";
         public const string FILES = "CR_FILES";
         public const string BAITHI = "NV_BAITHI";
-        
 
     }
 

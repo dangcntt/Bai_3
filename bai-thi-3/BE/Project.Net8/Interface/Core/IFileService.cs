@@ -8,12 +8,6 @@ public interface IFileService
 {
     Task<FileShortModel> SaveFileAsync(IFormFile file);
     
-    
     Task<FileView> GetFileById(string id);
-    
-    
-    Task<List<FileShortModel>> SaveMultiFileAsync(List<IFormFile> file);
-
-    
 
 }

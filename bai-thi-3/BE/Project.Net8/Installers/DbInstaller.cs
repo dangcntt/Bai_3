@@ -21,32 +21,25 @@ namespace Project.Net8.Installers
             #region Auth 
             services.AddScoped<IRefreshTokenService, RefreshTokenService>();
             services.AddScoped<IIdentityService, IdentityService>();
+
             #endregion
 
             #region Common
-
             services.AddScoped<ICommonService, CommonService>();
 
             #endregion
             
             #region Core 
-
-
-
             services.AddScoped<IMenuService, MenuService>();
-       
-
             services.AddScoped<ILoggingService, LoggingService>();
             services.AddScoped<IAPIService, APIService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IUnitRoleService, UnitRoleService>();
+            services.AddScoped<IFileService, FileService>();
 
             #endregion
 
-
             #region Nghiệp vụ  
-
-            
             services.AddScoped<IBaiThiService, BaiThiService>();
             
             #endregion

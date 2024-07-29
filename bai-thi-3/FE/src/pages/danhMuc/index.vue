@@ -289,28 +289,6 @@ export default {
                   ></multiselect>
                 </div>
               </div>
-              <!-- <div class="col-md-6">
-                <b-button variant=""
-                          class="w-10 btn-search btn-success"
-                          style="margin-right: 10px ; height: 40px ; width: 130px"
-                          size="sm"
-                          @click="handleSearch"
-                >
-                  <i
-                      class="bx bx-search font-size-16 align-middle me-2"
-                  ></i>
-                  Tìm kiếm
-                </b-button>
-                <b-button
-                    class="w-10 btn-reset btn-warning"
-                    style="margin-right: 10px; height: 40px ; width: 130px"
-                    size="sm"
-                    @click="handleClear"
-                >
-                  <i class="mdi mdi-replay font-size-16 align-middle me-2"></i>
-                  Làm mới
-                </b-button>
-              </div> -->
             </div>
             <div class="row">
               <div class="col-12">

@@ -1,8 +1,8 @@
 ﻿
-namespace NKTM.Constants
+namespace Project.Net8.Constants
 {
     static class DefaultPassword
     {
-        public const string Password = "DongThap@123";
+        public const string Password = "66k40054";
     }
 }

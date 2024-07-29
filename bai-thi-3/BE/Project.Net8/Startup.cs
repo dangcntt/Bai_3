@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.OpenApi.Models;
-using Minio;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using Project.Net8.Installers;
@@ -21,19 +20,6 @@ public class Startup
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
-        var endpoint = "minio.dongthap.gov.vn:9000";
-        var accessKey = "CKghMslGxFQhnlTN";
-        var secretKey = "UKnz2ype9MTCKNZqH2wbFcxS1Vph7ncx";
-
-
-        // Add Minio using the default endpoint
-        services.AddMinio(accessKey, secretKey);
-
-        // Add Minio using the custom endpoint and configure additional settings for default MinioClient initialization
-        services.AddMinio(configureClient => configureClient
-            .WithEndpoint(endpoint)
-            .WithCredentials(accessKey, secretKey));
-
         // NOTE: SSL and Build are called by the build-in services already.
 
 

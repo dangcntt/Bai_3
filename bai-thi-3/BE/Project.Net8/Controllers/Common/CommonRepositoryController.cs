@@ -41,6 +41,7 @@ namespace Project.Net8.Controllers.Common
                 );
             }
         }
+
         [HttpPost]
         [Route("update")]
         public async Task<IActionResult> Update([FromBody] TEntity model)
@@ -136,27 +137,27 @@ namespace Project.Net8.Controllers.Common
             }
         }
 
-    [HttpGet]
-    [Route("get-all/{collectionName}")]
-    public async Task<IActionResult> GetAllData(string collectionName)
-    {
-        try
+        [HttpGet]
+        [Route("get-all/{collectionName}")]
+        public async Task<IActionResult> GetAllData(string collectionName)
         {
-            var response = await Repository.GetAsync(collectionName);
-            return Ok(
-                new ResultMessageResponse()
-                    .WithData(response)
-                    .WithCode(DefaultCode.SUCCESS)
-                    .WithMessage(DefaultMessage.GET_DATA_SUCCESS)
-            );
-        }
-        catch (ResponseMessageException ex)
-        {
-            return Ok(
-                new ResultMessageResponse().WithCode(ex.ResultCode)
-                    .WithMessage(ex.ResultString)
-            );
+            try
+            {
+                var response = await Repository.GetAsync(collectionName);
+                return Ok(
+                    new ResultMessageResponse()
+                        .WithData(response)
+                        .WithCode(DefaultCode.SUCCESS)
+                        .WithMessage(DefaultMessage.GET_DATA_SUCCESS)
+                );
+            }
+            catch (ResponseMessageException ex)
+            {
+                return Ok(
+                    new ResultMessageResponse().WithCode(ex.ResultCode)
+                        .WithMessage(ex.ResultString)
+                );
+            }
         }
     }
-     }
 }

@@ -1,16 +1,12 @@
 using DTC.DefaultRepository.Constants;
 using DTC.DefaultRepository.Exceptions;
-using DTC.DefaultRepository.FromBodyModels;
 using DTC.DefaultRepository.Helpers;
 using DTC.MongoDB;
-using Minio.DataModel.Tags;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
-using Project.Net8.Constants;
 using Project.Net8.Installers;
 using Project.Net8.Interface.Major;
-using Project.Net8.Models.Core;
 using Project.Net8.Models.Major;
 using Project.Net8.Models.PagingParam;
 using Project.Net8.Service.Base;
@@ -61,6 +57,7 @@ namespace Project.Net8.Service.Major
                 entity.NguoiThucHien = model.NguoiThucHien;
                 entity.TrangThai = model.TrangThai;
                 entity.ParentId = model.ParentId;
+                entity.Files = model.Files;
 
                 entity.ModifiedAt = DateTime.Now;
                 entity.ModifiedBy = CurrentUserName;
@@ -90,7 +87,7 @@ namespace Project.Net8.Service.Major
                 var user = new ModelShort()
                 {
                     Id = CurrentUser.Id, 
-                    Name = CurrentUser.FullName,
+                    Name = CurrentUser.Name,
                 };
                 model.NguoiGiao = user;
 
@@ -118,8 +115,6 @@ namespace Project.Net8.Service.Major
                 var builder = Builders<BaiThiModel>.Filter;
                 var filter = builder.Empty;
                 filter = builder.And(filter, builder.Eq("IsDeleted", false));
-
-
 
                 if (!String.IsNullOrEmpty(pagingParam.Content))
                 {
@@ -171,18 +166,10 @@ namespace Project.Net8.Service.Major
                 return result;
 
             }
-            catch (ResponseMessageException e)
-            {
-                new ResultMessageResponse().WithCode(e.ResultCode)
-                    .WithMessage(e.ResultString);
-            }
             catch (Exception e)
             {
                 throw ExceptionError.Exception(e);
             }
-
-            return null;
-
         }
 
         public async Task<dynamic> GetTreeAll()

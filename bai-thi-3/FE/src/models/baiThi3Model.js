@@ -10,6 +10,7 @@ const toJson = (item) => {
         nguoiGiao: item.nguoiGiao,
         nguoiThucHien: item.nguoiThucHien,
         parentId: item.parentId,
+        files: item.files
     }
 }
 
@@ -24,6 +25,7 @@ const fromJson = (item) => {
         nguoiGiao: item.nguoiGiao,
         nguoiThucHien: item.nguoiThucHien,
         parentId: item.parentId,
+        files: item.files
     }
 }
 
@@ -38,6 +40,7 @@ const baseJson = () => {
         nguoiGiao: null,
         nguoiThucHien: null,
         parentId: null,
+        files:[],
     }
 }
 

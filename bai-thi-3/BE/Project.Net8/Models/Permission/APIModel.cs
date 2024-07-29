@@ -1,6 +1,6 @@
 using DTC.DefaultRepository.Models.Base;
 using DTC.T;
-using NKTM.Constants;
+using Project.Net8.Constants;
 
 namespace Project.Net8.Models.Permission
 {

@@ -54,7 +54,7 @@ namespace Project.Net8.Service.Core
             {
                 Directory.CreateDirectory(path);
             }
-            if (!NKTM.Constants.DefaultFile.FILES.Contains(extFile))
+            if (!Project.Net8.Constants.DefaultFile.FILES.Contains(extFile))
                 throw new ResponseMessageException()
                     .WithCode(DefaultCode.ERROR_STRUCTURE)
                     .WithMessage("File không thể cập nhật vào hệ thống");
@@ -123,13 +123,6 @@ namespace Project.Net8.Service.Core
             {
                 throw ExceptionError.Exception(e);
             }
-
-            return null;
-        }
-
-        public Task<List<FileShortModel>> SaveMultiFileAsync(List<IFormFile> file)
-        {
-            throw new NotImplementedException();
         }
     }
 }

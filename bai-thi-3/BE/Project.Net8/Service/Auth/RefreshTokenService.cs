@@ -8,7 +8,7 @@ using DTC.DefaultRepository.Helpers;
 using DTC.MongoDB;
 using Microsoft.IdentityModel.Tokens;
 using MongoDB.Driver;
-using NKTM.Constants;
+using Project.Net8.Constants;
 using Project.Net8.Installers;
 using Project.Net8.Interface.Auth;
 using Project.Net8.Models.Auth;

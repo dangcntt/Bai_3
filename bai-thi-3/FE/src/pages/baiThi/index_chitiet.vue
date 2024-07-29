@@ -174,6 +174,20 @@ export default {
                             </div>
                             <div class="col-12">
                                 <div class="mb-6">
+                                    <label class="text-left" style="font-weight: bold">File đính kèm: </label>
+                                    <div v-if="model.files.length > 0">
+                                        <div v-for="file in model.files" :key="file.fileId" class="file-item">
+                                            <b-link class="ml-25"
+                                                :href="`https://localhost:5001/api/v1/files/view/${file.fileId}`"
+                                                target="_blank">
+                                                {{ file.fileName }}
+                                            </b-link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mb-6">
                                     <label class="text-left" style="font-weight: bold">Công việc con: </label>
                                     <div class="table-responsive mb-0">
                                         <b-table class="datatables table-admin" :items="listChildren" :fields="fields"

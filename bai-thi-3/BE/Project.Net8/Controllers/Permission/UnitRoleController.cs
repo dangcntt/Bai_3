@@ -1,7 +1,7 @@
 using DTC.DefaultRepository.Exceptions;
 using DTC.DefaultRepository.Helpers;
 using Microsoft.AspNetCore.Mvc;
-using NKTM.Constants;
+using Project.Net8.Constants;
 using Project.Net8.Controllers.DefaultRepository;
 using Project.Net8.FromBodyModels;
 using Project.Net8.Installers;

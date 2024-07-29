@@ -5,7 +5,7 @@ using DTC.MongoDB;
 using FluentValidation.Results;
 using MongoDB.Bson;
 using MongoDB.Driver;
-using NKTM.Constants;
+using Project.Net8.Constants;
 using Project.Net8.Installers;
 using Project.Net8.Interface.Permission;
 using Project.Net8.Models.Permission;
