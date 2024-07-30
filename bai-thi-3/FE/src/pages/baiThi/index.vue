@@ -347,8 +347,8 @@ export default {
         <div class="card">
           <div class="card-body">
             <div class="row mb-2">
-              <div class="search-box align-items-center">
-                <div class="col-6 position-relative me-2">
+              <div class="col-6 search-box align-items-center">
+                <div class="position-relative me-2">
                   <input
                     v-model="filter"
                     type="text"
@@ -358,29 +358,28 @@ export default {
                   <i class="bx bx-search-alt search-icon"></i>
                 </div>
                 &nbsp;
-                <div class="col-6 align-items-center">
-                  <label class="me-2 mb-0" style="width: 20%"
-                    >Trạng thái:</label
-                  >
-                  <multiselect
-                    v-model="filterTrangThai"
-                    :options="listTrangThai"
-                    :multiple="false"
-                    track-by="code"
-                    selectLabel="Nhấn vào để chọn"
-                    deselectLabel="Nhấn vào để xóa"
-                    label="name"
-                    placeholder="Tìm kiếm theo trạng thái"
-                    class="flex-grow-1"
-                  >
-                  </multiselect>
-                </div>
               </div>
+              <div class="col-6 align-items-center">
+                <label class="me-2 mb-0" style="width: 20%">Trạng thái:</label>
+                <multiselect
+                  v-model="filterTrangThai"
+                  :options="listTrangThai"
+                  :multiple="false"
+                  track-by="code"
+                  selectLabel="Nhấn vào để chọn"
+                  deselectLabel="Nhấn vào để xóa"
+                  label="name"
+                  placeholder="Tìm kiếm theo trạng thái"
+                  class="flex-grow-1"
+                >
+                </multiselect>
+              </div>
+
               <div class="col-sm-12">
                 <div class="text-sm-end">
                   <b-button
                     type="button"
-                    class="btn-label cs-btn-primary mb-2 me-2 btn-large"
+                    class="btn-label mb-2 me-2 btn-rounded btn-large"
                     @click="showModal = true"
                   >
                     <i class="mdi mdi-plus me-1 label-icon"></i> Tạo công việc
@@ -734,5 +733,9 @@ export default {
 .td-xuly {
   text-align: center;
   width: 20%;
+}
+.btn-rounded {
+  margin-top: 10px;
+  background-color: blueviolet;
 }
 </style>

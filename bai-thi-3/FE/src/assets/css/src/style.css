@@ -85,7 +85,7 @@
 
 /* Chỉnh button ở dưới table */
 .pagination-rounded .page-item.active .page-link {
-    background-color: #082957 !important;
+    background-color: violet !important;
 }
 
 /* ------------------------- */
@@ -226,11 +226,11 @@
 
 /* Viền Bordered table */
 .table-bordered th, .table-bordered td {
-    border: 1px solid  #082957;
+    border: 1px solid  violet;
 }
 /* Xử lý chỗ head trên table */
 .table thead th, thead, th {
-    background-color: #082957 !important;
+    background-color: violet !important;
     accent-color: #FFFFFF !important;
 }
 .table > tbody > tr > td {
@@ -266,11 +266,11 @@
 }
 
 #sidebar-menu .mm-active .active{
-    border-left: 1.5px solid #082957;
+    border-left: 1.5px solid violet;
     background: -webkit-gradient(linear, left top, right top, from(rgba(8, 41, 87, 0.1)), to(rgba(8, 41, 87, 0)));
     background: linear-gradient(90deg, rgba(8, 41, 87, 0.1), rgba(8, 41, 87, 0));
     font-weight: bold;
-    color: #082957;
+    color: violet;
 }
 #sidebar-menu .sub-menu a{
 
@@ -307,7 +307,7 @@
 }
 
 .cs-title-box .cs-title {
-    background-color: #2b569a;
+    background-color: violet !important;;
     color: #ffffff;
     width: fit-content;
     padding: 5px;
@@ -365,7 +365,7 @@
 .money{
     width:250px;
     background: #d9e6ff;
-    color: #082957;
+    color: violet;
     padding: 5px 10px;
     text-align: center;
     border-radius: 10px;

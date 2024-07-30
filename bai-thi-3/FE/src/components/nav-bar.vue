@@ -1,5 +1,4 @@
 <script>
-
 import i18n from "../i18n";
 import { authComputed } from "@/state/helpers";
 
@@ -9,13 +8,13 @@ import { authComputed } from "@/state/helpers";
 export default {
   data() {
     return {
-      url: process.env.VUE_APP_API_URL + 'files/view/',
+      url: process.env.VUE_APP_API_URL + "files/view/",
       lan: i18n.locale,
       text: null,
       flag: null,
       value: null,
       myVar: 1,
-      currentUserAuth: null
+      currentUserAuth: null,
     };
   },
   components: {},
@@ -76,13 +75,13 @@ export default {
         if (checkTabData) {
           localStorage.removeItem("TabData");
         }
-        window.location.href = "/dang-nhap"
+        window.location.href = "/dang-nhap";
         return;
       }
     },
     handleThongTinCaNhan() {
       this.$router.push("/thong-tin-ca-nhan");
-    }
+    },
   },
   computed: {
     ...authComputed,
@@ -91,7 +90,7 @@ export default {
 </script>
 <template>
   <header id="page-topbar">
-    <div class="navbar-header" style="background: #082957">
+    <div class="navbar-header" style="background: violet">
       <div class="d-flex">
         <!-- LOGO -->
         <div class="navbar-brand-box">
@@ -112,55 +111,72 @@ export default {
             </span>
           </router-link>
         </div>
-        <button id="vertical-menu-btn" type="button" class="btn btn-sm px-3 font-size-16 header-item"
-          @click="toggleMenu">
+        <button
+          id="vertical-menu-btn"
+          type="button"
+          class="btn btn-sm px-3 font-size-16 header-item"
+          @click="toggleMenu"
+        >
           <i class="fa fa-fw fa-bars"></i>
         </button>
         <!-- App Search-->
-        <form class="app-search" style="display: flex; justify-content: center; align-items: center">
+        <form
+          class="app-search"
+          style="display: flex; justify-content: center; align-items: center"
+        >
           <div class="text-white" style="font-weight: bold; font-size: 15px">
             QUẢN LÝ CÔNG VIỆC
           </div>
         </form>
       </div>
       <div class="d-flex">
-
         <div class="dropdown d-none d-lg-inline-block ms-1">
-          <button type="button" class="btn header-item noti-icon pt-4" @click="initFullScreen" style="margin-top:5px">
+          <button
+            type="button"
+            class="btn header-item noti-icon pt-4"
+            @click="initFullScreen"
+            style="margin-top: 5px"
+          >
             <i class="bx bx-fullscreen"></i>
           </button>
         </div>
-        <b-dropdown right variant="black" toggle-class="header-item" menu-class="dropdown-menu-end">
+        <b-dropdown
+          right
+          variant="black"
+          toggle-class="header-item"
+          menu-class="dropdown-menu-end"
+        >
           <template v-slot:button-content>
             <span>
               <span v-if="currentUserAuth && currentUserAuth.avatar">
-                <b-img :src="url + `${currentUserAuth.avatar.fileId}`" alt="Avatar"
-                  class="rounded-circle header-profile-user mb-3">
+                <b-img
+                  :src="url + `${currentUserAuth.avatar.fileId}`"
+                  alt="Avatar"
+                  class="rounded-circle header-profile-user mb-3"
+                >
                 </b-img>
               </span>
               <span v-else>
-                <img class="rounded-circle header-profile-user mb-3" src="@/assets/images/avatar-default.png"
-                  alt="Avatar" />
-              </span>
-            </span>&nbsp;
+                <img
+                  class="rounded-circle header-profile-user mb-3"
+                  src="@/assets/images/avatar-default.png"
+                  alt="Avatar"
+                />
+              </span> </span
+            >&nbsp;
             <span class="d-none d-xl-inline-block ms-1 mt-3">
-              <div v-if="currentUserAuth" style="font-size: 10px;">
+              <div v-if="currentUserAuth" style="font-size: 10px">
                 <div style="font-size: 12px">
                   {{ currentUserAuth.name }}
-                  <i class="mdi mdi-chevron-down d-none d-xl-inline "></i>
+                  <i class="mdi mdi-chevron-down d-none d-xl-inline"></i>
                 </div>
-                <div class="text-start">
-                  @{{ currentUserAuth.userName }}
-                </div>
+                <div class="text-start">@{{ currentUserAuth.userName }}</div>
               </div>
-              <div v-else>
-                User
-              </div>
+              <div v-else>User</div>
             </span>
           </template>
           <b-dropdown-item>
             <a v-on:click="handleThongTinCaNhan">
-
               <span>
                 <i class="bx bx-user font-size-16 align-middle me-1"></i>
                 Thông tin cá nhân
@@ -169,11 +185,12 @@ export default {
           </b-dropdown-item>
           <b-dropdown-divider></b-dropdown-divider>
           <a v-on:click="logoutUser" class="dropdown-item text-danger">
-            <i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i>
+            <i
+              class="bx bx-power-off font-size-16 align-middle me-1 text-danger"
+            ></i>
             Đăng xuất
           </a>
         </b-dropdown>
-
       </div>
     </div>
   </header>

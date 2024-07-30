@@ -24,8 +24,9 @@ namespace Project.Net8.Service.Permission
 
         public UserService(
             DataContext context,
-            IHttpContextAccessor contextAccessor) :
-            base(context, contextAccessor)
+            IHttpContextAccessor contextAccessor) 
+
+        :base(context, contextAccessor)
         {
             _context = context;
             BaseMongoDb = new BaseMongoDb<User, string>(_context.USERS);
